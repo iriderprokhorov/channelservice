@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "neon-runway-362513",
+  "private_key_id": "9488f61134bf934b47f95de2fe4eedc7811cd8c4",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDjjTweCHxmvDFM\ndjumIlLbPRhJbwvtFK/QaKnU75sBTQuV61MiVjlwWfuV+bnsSL6pVVwi5ZF/PuR6\n9ANg57YY6Kaa0x/D7NgvP9sh3QBVUp7/67sOhCtB3p/P9ArajpPCpYlpDL5QTDUH\nNTdWuyVEx+j60dri7KTfSEGD/hkk/w67+C3jyiQglWzFtS80Iorbzw5tz4Rr/L+C\nhZosFL+HCVKv0r/CKhl427gLWBeGZC6IqMdjrI8uNylkAoInlmC+cmO39WMoAaeF\nlTAPwv18L075+qPRsfCDawBbjpzc77ZfdcsmOJPQuawB6fEgb8KktsVQq+OIzoKt\n/s4G+W51AgMBAAECggEAIj5iYiinw/QlPRr73gQDUQ/wJDjsZAi9bpEZobxPKNJ1\n4GFSGPQ9350DAe5bXuYRnz0DyRKgIzSNQL2Q9pfYLQZx8BG+kYcGf5HOAdoWz0BI\nQj4w373fHqIIjcxth7d2IBA2ThNHXqEhR8zn34r5UFD/TCOhm42+QAXJKjpmgU0C\nKrqBDKyhwtGmRbFPhmyFcuv/kWsoGqLN0wBF/nH0emWEuVnvb/Ny+9+hb1zzcWS2\nCM+DnmaxAcST8CJltD/0xGGspbbLRkbf8I4KOuRaMeJVspqn8ekjIHQaSTd+yU6H\nV+CgqKtsdMzvm9kRsEXZD0WNe64P0P9biw/3Wauh3wKBgQD9APqaGoCgydN+IgoN\n1bd0eOzvZmpbPQhtkFQJWVHQ4AkWVT8AUsi/kG+jo9GnIzmICnFbAoH7iT+W2YIq\nbot+NLIfDY9Kj05IK+iKUPUedAooPSHaKdodlU1npIoqIGOldxtg/uHZ9l4gq1Ns\n0/MeSiYGZRiglmW4ywppBSWLLwKBgQDmPxgB1sReZ0tfJAKgHD1uu2ki5gw0ugVZ\nT1Zivn2NKXyDqSunMbxOT0ymnqxulmAmQJtEuDe9QR8jbU3ZAqbzTCgloxSay2QA\n679XjUoL+6i5id8KxE18UpNr9PgeWxId2X5dMYZT426tSFHsuj6l9cJD05cDK1QM\nSVDDtRYnmwKBgQCsbJZdn+I5slKoi5o+g4BbqG4RWcLyG047HTmohW704zpONhqR\npdmadF0hMOwY9DCpPjSyyaq8OnVT4TiMonn+sPsTnrIhJjk7hnEckr/62Spy8fa4\nL/2uW6o9EC35N8mxYtMN76cMXJMZwKlCadAuvGndwdhe2SDKJ9YYbKGBkQKBgDfK\nQf7wE1Tsoo7DIv+42Ankz2ztYTfFe1ZQqxXyImn6C3m7nCA/JOm0vVYCTLXfKh0a\nuoTEPn1VMj5bVemngtyhL3kvMubvMaQne42zZqXQrOmIRstNFZlySNZ33Uc9uf4R\nnVTnkyzwhvjl9TPvTQ7ZpeDZfFYAQbVYboF9d4jRAoGABGd/sdrO3Zj0p1qLVMDj\n9kT3NER8Uq51f95zESDfNzyhnojtEU+cN4nFBq9SGGFNiPrvGhIoE/yc2GXnzWbz\nXH6vyCN9fP6XkpmIFZmkvoTcUY8DP5ozHAUs21DolxCKxahwV9opC4GdnZIpu7H5\n3saKgpddPIFXWVriyeNhpTg=\n-----END PRIVATE KEY-----\n",
+  "client_email": "channelservice@neon-runway-362513.iam.gserviceaccount.com",
+  "client_id": "100507335961800192745",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/channelservice%40neon-runway-362513.iam.gserviceaccount.com"
+}
