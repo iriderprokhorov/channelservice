@@ -1,6 +1,12 @@
 # Get data from google sheets
-Проект содержит скрипт goosheets.py для выгрузки данных с google docs. Если поместить данный скрипт в крон, то синхронизация будет происходить каждую минуту. Расположен он в директории проекта django_react. Данный скрипт получает данные с google docs и вставляет их в базу данных Postgresql. В качестве бекенда используется Django, в качестве фронтенда React. Можно посмотреть работу по адресу http://paturaka.beget.app:8000/ (chrome)
+Проект содержит скрипт goosheets.py для выгрузки данных с google docs https://docs.google.com/spreadsheets/d/1Fr7PjXteEt7MzWHIycbwScs7hMOUCu4NzdPkNrYoccI/. Расположен скрипт в директории проекта django_react. Данный скрипт получает данные с google docs и вставляет их в базу данных Postgresql. Реализована проверка соблюдения «срока поставки» из таблицы. В случае, если срок прошел, скрипт отправляет уведомление в Telegram. Данные для перевода $ в рубли получаем по курсу ЦБ РФ. В качестве бекенда используется Django, в качестве фронтенда React. Можно посмотреть работу по адресу http://paturaka.beget.app:8000/ (chrome)
 
+
+## Создание крона для автоматического выполнения скрипта
+
+```bash
+* * * * * cd /root/channelservice && source venv/bin/activate && cd django_react && /usr/bin/python3 goosheets.py
+```
 
 ## Установка backend
 Предварительно установите Postgresql, Python3 (данный проект использует 3.8), python3-pip, python3-venv, git
