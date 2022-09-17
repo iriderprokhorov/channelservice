@@ -2,7 +2,7 @@ from googleapiclient.discovery import build
 from googleapiclient.errors import HttpError
 from google.oauth2 import service_account
 from pycbrf import ExchangeRates
-import datetime
+from datetime import datetime
 import psycopg2
 import os
 import requests
@@ -82,7 +82,7 @@ def main():
 if __name__ == "__main__":
     sheet_values = main()
     usd_currency = get_currency()
-    today = datetime.date.today()
+    today = datetime.now().date()
 
 # establishing the connection to db
 try:
@@ -96,8 +96,8 @@ try:
     cursor = conn.cursor()
     cursor.execute("DELETE from orders_order")
     for each in sheet_values:
-        if datetime.datetime.strptime(each[3], "%d.%m.%Y").date() < today:
-            send_message("".join(each))
+        if datetime.strptime(each[3], "%d.%m.%Y").date() < today:
+            print(each)
         each.append(round(int(each[2]) * usd_currency, 2))
         cursor.execute(
             "INSERT into orders_order(number, order_number, price_usd, srok_postavki, price_rub) VALUES (%s, %s, %s, %s, %s)",
