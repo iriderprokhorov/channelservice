@@ -97,7 +97,7 @@ try:
     cursor.execute("DELETE from orders_order")
     for each in sheet_values:
         if datetime.strptime(each[3], "%d.%m.%Y").date() < today:
-            print(each)
+            send_message(each)
         each.append(round(int(each[2]) * usd_currency, 2))
         cursor.execute(
             "INSERT into orders_order(number, order_number, price_usd, srok_postavki, price_rub) VALUES (%s, %s, %s, %s, %s)",
