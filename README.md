@@ -1,12 +1,8 @@
 # Get data from google sheets
-Проект содержит скрипт goosheets.py для выгрузки данных с google docs https://docs.google.com/spreadsheets/d/1Fr7PjXteEt7MzWHIycbwScs7hMOUCu4NzdPkNrYoccI/. Расположен скрипт в директории проекта django_react. Данный скрипт получает данные с google docs и вставляет их в базу данных Postgresql. Реализована проверка соблюдения «срока поставки» из таблицы. В случае, если срок прошел, скрипт отправляет уведомление в Telegram. Данные для перевода $ в рубли получаем по курсу ЦБ РФ. В качестве бекенда используется Django, в качестве фронтенда React. Можно посмотреть работу по адресу http://paturaka.beget.app:8000/ (chrome)
+Проект содержит скрипт goosheets.py для выгрузки данных с google docs https://docs.google.com/spreadsheets/d/1Fr7PjXteEt7MzWHIycbwScs7hMOUCu4NzdPkNrYoccI/. Расположен скрипт в директории проекта django_react.Данный скрипт получает данные с google docs и вставляет их в базу данных Postgresql. Реализована проверка соблюдения «срока поставки» из таблицы. В случае, если срок прошел, скрипт отправляет уведомление в Telegram. Данные для перевода $ в рубли получаем по курсу ЦБ РФ. В качестве бекенда используется Django, в качестве фронтенда React. Можно посмотреть работу по адресу http://paturaka.beget.app:8000/ (chrome)
+СИНХРОНИЗАЦИЯ С БАЗОЙ ДАННОЙ РАЗ В МИНУТУ! (настраивается)
 
-
-## Создание крона для автоматического выполнения скрипта
-
-```bash
-* * * * * cd /root/channelservice && source venv/bin/activate && cd django_react && /usr/bin/python3 goosheets.py
-```
+## 
 
 ## Установка backend
 Предварительно установите Postgresql, Python3 (данный проект использует 3.8), python3-pip, python3-venv, git
@@ -26,19 +22,16 @@ python -m venv env
 ```bash
 source env/bin/activate
 ```
-
-* Cоздайте файл `.env`  с содержанием:
+* Cоздайте файл `.env` в директории проекта, рядом с settings.py с содержанием:
 
 ```
-SHEET_ID = id документа гугл
-DB_NAME= имя базы данных
-POSTGRES_USER=логин для подключения к базе данных
-POSTGRES_PASSWORD= пароль для подключения к БД 
-DB_HOST=
-DB_PORT=порт для подключения к БД
-TOKEN=telegram token
-CHAT_ID= id канала
+SECRET_KEY=секретный ключ django
+DB_NAME=
+DB_USER=
+DB_PASSWORD=
 ```
+
+
 
 * Перейти в директирию и установить зависимости из файла requirements.txt:
 
@@ -69,6 +62,26 @@ npm install
 npm run dev
 ```
 
+## Настройка скрипта goosheet.ru
+
+* Cоздайте файл `.env` в директории проекта с содержанием:
+
+```
+SHEET_ID = id документа гугл
+DB_NAME= имя базы данных
+POSTGRES_USER=логин для подключения к базе данных
+POSTGRES_PASSWORD= пароль для подключения к БД 
+DB_HOST= имя хоста с бд\контейнера
+DB_PORT=порт для подключения к БД
+TOKEN=telegram token
+CHAT_ID= id канала
+```
+
+Создание крона для автоматического выполнения скрипта
+
+```bash
+* * * * * cd /root/channelservice/django_react && /usr/bin/python3 goosheets.py
+```
 
 ## "To do"
 - [x] Добавить крутое README
